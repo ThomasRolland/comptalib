@@ -26,6 +26,10 @@ module.exports = (sequelize, DataTypes) => {
         name: {
             type:			DataTypes.STRING,
             allowNull: 		false,
+            unique: {
+                args: 		true,
+                msg: 		"name (for company) already exists"
+            }
         },
         zipCode: {
             type:			DataTypes.INTEGER,

@@ -248,9 +248,11 @@ router.post("/addUser/:id", async (req, res) =>
 {
     let company = await Company.findByPk(req.params.id)
 
-    for (const item of req.body.userId) {
-        const user = await User.findByPk(item)
-        await company.addUser(user)
+    if (company) {
+        for (const item of req.body.userId) {
+            const user = await User.findByPk(item)
+            await company.addUser(user)
+        }
     }
 
     Company.findByPk(
