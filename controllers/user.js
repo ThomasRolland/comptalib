@@ -185,7 +185,7 @@ router.put("/:id", auth.yourSelfOnly(),async (req, res) => {
             return res.status(400).json({ code: 500, data: err, message: 'Bad request : something went wrong' });
         }
     }
-    return res.status(200).json({ code: 200, data: await User.findByPk(user.id), message: "" });
+    return res.status(200).json({ code: 200, data: await User.findByPk(req.params.id), message: "" });
 });
 
 
