@@ -32,7 +32,14 @@ const swaggerDefinition = {
 
 const options = {
   swaggerDefinition,
-  apis: ["./controllers/*.js", "./models/*.js"]
+  apis: ["./controllers/*.js", "./models/*.js"],
+  securityDefinitions: {
+    bearerAuth: {
+      type: "apiKey",
+      name: "oauth_token",
+      in: "header"
+    }
+  }
 };
 
 const swaggerSpec = swaggerJSDoc(options);
