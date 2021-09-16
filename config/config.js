@@ -3,6 +3,15 @@ const process = require("process");
 
 const env = process.env.NODE_ENV || 'development';
 const config = {
+  test: {
+    "username": "root",
+    "password": "",
+    "database": "comptalib_test",
+    "port": 25060,
+    "host": "127.0.0.1",
+    "SECRET_KEY": "test_comptalib",
+    "dialect": "mysql",
+  },
   development: {
     "username": "root",
     "password": "",

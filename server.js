@@ -77,6 +77,7 @@ db.sequelize
     if (server) {
       server.listen(port, () => {
         console.log("Listen on port", port);
+        app.emit('serverStarted');
       });
     }
 
@@ -89,3 +90,7 @@ db.sequelize
       );
     });
   });
+
+module.exports = {
+  app,
+};
