@@ -1,12 +1,10 @@
 'use strict';
 
-const TokenGenerator        = require('uuid-token-generator');
 const bcrypt                = require('bcryptjs');
 const jwt                   = require('jsonwebtoken');
 const auth                  = require('../middleware/auth.js');
 const config                 = require('../config/config');
 const router                = require('express').Router();
-const { Op }                = require("sequelize");
 const { User, Company }              = require('../models/index');
 
 
