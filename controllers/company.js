@@ -219,11 +219,11 @@ router.delete("/:id", (req, res) =>
 /**
  * @swagger
  * /company/addUser/{id}:
- *   delete:
+ *   post:
  *     tags:
  *       - Company
- *     name: Delete one company
- *     summary: Delete one company
+ *     name: Add one or multiple User to Company
+ *     summary: Add one or multiple User to Company
  *     consumes:
  *       - application/json
  *     parameters:
