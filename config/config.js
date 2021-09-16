@@ -9,6 +9,7 @@ const config = {
     "database": "comptalib",
     "port": 25060,
     "host": "127.0.0.1",
+    "SECRET_KEY": "test_comptalib",
     "dialect": "mysql",
   },
   prod: {
@@ -17,6 +18,7 @@ const config = {
     "database": "",
     "port": "",
     "host": "",
+    "SECRET_KEY": "",
     "dialect": "",
   }
 }
